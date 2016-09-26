@@ -1,2 +1,5 @@
 app/etc/local.xml
 /exos/
+/.ideas/
+/var/cache/
+/var/session/
