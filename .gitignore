@@ -3,3 +3,5 @@ app/etc/local.xml
 /.idea/
 /var/cache/
 /var/session/
+/var/log/
+/media/catalog/product/cache
