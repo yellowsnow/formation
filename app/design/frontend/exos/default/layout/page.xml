@@ -113,10 +113,10 @@
                 </block>
                 <block type="page/html_welcome" name="welcome" as="welcome"/>
 
-                <block type="core/template"
-                       name="hello_world_name"
-                       as="hello_world_alias"
-                       template="helloworld/hello.phtml"/>
+                <!--<block type="core/template"-->
+                       <!--name="hello_world_name"-->
+                       <!--as="hello_world_alias"-->
+                       <!--template="helloworld/hello.phtml"/>-->
             </block>
 
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
