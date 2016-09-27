@@ -7,5 +7,29 @@
                    as="hello_world_alias"
                    template="helloworld/hello.phtml"/>
         </reference>
+
+        <reference name="right">
+            <block type="core/template"
+                   name="exo_image_right"
+                   as="exo_image_right"
+                   template="exos/image_right.phtml"/>
+        </reference>
     </default>
+
+    <catalog_category_layered>
+        <!-- supprime un block de toute la page -->
+        <!--<remove name="tags_popular" />-->
+
+        <reference name="left">
+            <!-- supprime un block enfant du parent spécifié -->
+            <action method="unsetChild">
+                <name>tags_popular</name>
+            </action>
+            <!--<action method="unsetChildren" />-->
+        </reference>
+
+        <reference name="right">
+            <block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>
+        </reference>
+    </catalog_category_layered>
 </layout>
