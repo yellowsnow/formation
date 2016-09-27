@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout version="0.1.0">
+    <default>
+        <reference name="header">
+            <block type="core/template"
+                   name="hello_world_name"
+                   as="hello_world_alias"
+                   template="helloworld/hello.phtml"/>
+        </reference>
+    </default>
+</layout>
