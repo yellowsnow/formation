@@ -26,14 +26,15 @@
                 <name>tags_popular</name>
             </action>
             <!--<action method="unsetChildren" />-->
-            <block type="poll/activePoll" name="right.poll">
-                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
-                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
-            </block>
+            <action method="append">
+                <name>right.poll</name>
+            </action>
         </reference>
 
         <reference name="right">
-            <block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>
+            <action method="append">
+                <name>tags_popular</name>
+            </action>
             <action method="unsetChild">
                 <name>right.poll</name>
             </action>
