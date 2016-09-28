@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <ECA_Message>
+            <version>0.1.0</version>
+        </ECA_Message>
+    </modules>
+    <global>
+        <blocks>
+            <eca_message>
+                <class>ECA_Message_Block</class>
+            </eca_message>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <eca_message>
+                    <file>eca_message.xml</file>
+                </eca_message>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <ECA_Message>
+                    <files>
+                        <default>ECA_Message.csv</default>
+                    </files>
+                </ECA_Message>
+            </modules>
+        </translate>
+    </frontend>
+</config>
