@@ -29,5 +29,14 @@
                 </ECA_Message>
             </modules>
         </translate>
+        <routers>
+            <eca_message>
+                <use>standard</use>
+                <args>
+                    <module>ECA_Message</module>
+                    <frontName>eca_message</frontName>
+                </args>
+            </eca_message>
+        </routers>
     </frontend>
 </config>
