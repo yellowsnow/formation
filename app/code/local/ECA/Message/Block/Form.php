@@ -10,4 +10,14 @@ class ECA_Message_Block_Form extends Mage_Core_Block_Template
     {
         return $this->__('Hello World !');
     }
+
+    /**
+     * Get save url
+     *
+     * @return string
+     */
+    public function getSaveUrl()
+    {
+        return $this->getUrl('eca_message/index/save');
+    }
 }
