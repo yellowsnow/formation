@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <layout version="0.1.0">
     <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/alert.js</name>
+                <params/>
+                <if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+        </reference>
         <reference name="header">
+            <action method="unsetChildren" >
+            </action>
+        </reference>
+        <reference name="right">
             <block type="core/template"
-                   name="hello_world_name"
-                   as="hello_world_alias"
-                   template="helloworld/hello.phtml"/>
+                   name="image"
+                   as="image_alias"
+                   template="helloworld/image.phtml"/>
+        </reference>
+        <reference name="left">
+            <action method="unsetChildren"></action>
+            <action method="append" >
+                <name>catalog.topnav</name>
+            </action>
+        </reference>
+        <reference name="footer_links">
+            <action method="addLink" translate="label" module="account">
+                <name>Login</name>
+                <prepare>/customer/account/login</prepare>
+                <url>/customer/account/login</url>
+            </action>
         </reference>
     </default>
+    <cms_index_index>
+        <update handle="page_three_columns"/>
+    </cms_index_index>
+
+    <reference name="right">
+        <action method="unsetChild">
+            <name>right.reports.product.viewed</name>
+        </action>
+    </reference>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/product_color.css</name>
+                <params/>
+                <if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+        </reference>
+    </catalog_product_view>
+    <catalogsearch_advanced_index>
+        <update handle="page_three_columns"/>
+        <reference name="content">
+            <action method="append">
+                <name>html_calendar</name>
+            </action>
+        </reference>
+    </catalogsearch_advanced_index>
+    <catalogsearch_result_index>
+        <remove name="right"/>
+        <update handle="page_two_columns_left"/>
+
+    </catalogsearch_result_index>
 </layout>
