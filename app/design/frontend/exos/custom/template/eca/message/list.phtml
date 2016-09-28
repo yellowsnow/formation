@@ -1,0 +1,21 @@
+<?php /* @var $this ECA_Message_Block_List */ ?>
+<?php /* @var $helper ECA_Message_Helper_Data */ ?>
+<?php $helper = $this->helper('eca_message'); ?>
+
+<?php $messageCollection = $this->getMessageCollection(); ?>
+<?php if ($messageCollection->count() > 0): ?>
+<ul>
+    <?php /* @var $message ECA_Message_Model_Message */ ?>
+    <?php foreach ($messageCollection as $message): ?>
+        <?php Zend_Debug::dump($message->debug()); ?>
+    <li>
+        <p><?php echo $helper->__('Message id : %s', $message->getId()); ?></p>
+        <p><?php echo $helper->__('Message title : %s', $message->getTitle()); ?></p>
+        <p><?php echo $helper->__('Message content : %s', $message->getContent()); ?></p>
+        <p>&nbsp;</p>
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php else: ?>
+<p><?php echo $helper->__('No messages.'); ?></p>
+<?php endif; ?>

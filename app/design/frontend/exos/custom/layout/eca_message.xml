@@ -19,4 +19,15 @@
                    template="eca/message/form.phtml" />
         </reference>
     </eca_message_index_new>
+
+    <eca_message_index_list>
+        <update handle="page_one_column" />
+
+        <reference name="content">
+            <block type="eca_message/list"
+                   name="eca_message_list"
+                   as="eca_message_list"
+                   template="eca/message/list.phtml" />
+        </reference>
+    </eca_message_index_list>
 </layout>
