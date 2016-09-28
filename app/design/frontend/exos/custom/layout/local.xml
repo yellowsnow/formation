@@ -37,7 +37,7 @@
         </reference>
 
         <reference name="footer">
-            <!--<action method="unsetChildren" />-->
+            <action method="unsetChildren" />
         </reference>
     </default>
 
