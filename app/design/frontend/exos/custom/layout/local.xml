@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <layout version="0.1.0">
     <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/dragees.css</name>
+                <params/>
+                <if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if>
+            </action>
+        </reference>
+
         <reference name="header">
             <block type="core/template"
                    name="hello_world_name"
                    as="hello_world_alias"
                    template="helloworld/hello.phtml"/>
+
+            <action method="unsetChildren"   />
         </reference>
 
         <reference name="right">
@@ -14,6 +25,19 @@
                    name="exo_image_right"
                    as="exo_image_right"
                    template="exos/image_right.phtml"/>
+        </reference>
+
+        <reference name="footer_links">
+            <action method="addLink" translate="label title">
+                <label>Customer login</label>
+                <url>customer/account/login</url>
+                <title>Customer login</title>
+                <prepare>true</prepare>
+            </action>
+        </reference>
+
+        <reference name="footer">
+            <!--<action method="unsetChildren" />-->
         </reference>
     </default>
 
@@ -47,4 +71,34 @@
             </action>
         </reference>
     </catalog_category_layered>
+
+    <catalog_product_view>
+        <reference name="head">
+            <!--<action method="addCss">-->
+            <!--<stylesheet>css/product_color.css</stylesheet>-->
+            <!--</action>-->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/product_color.css</name>
+                <params/>
+                <if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if>
+            </action>
+        </reference>
+
+        <reference name="product.info.additional">
+            <action method="unsetChild">
+                <name>product_tag_list</name>
+            </action>
+        </reference>
+    </catalog_product_view>
+
+    <catalogsearch_advanced_index>
+        <update handle="page_three_columns"/>
+    </catalogsearch_advanced_index>
+
+    <catalogsearch_result_index>
+        <remove name="right" />
+
+        <update handle="page_two_columns_left"/>
+    </catalogsearch_result_index>
 </layout>
