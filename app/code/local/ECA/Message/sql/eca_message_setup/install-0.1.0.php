@@ -19,8 +19,8 @@ $table = $adapter->newTable($installer->getTable('eca_message/message'))
     ), 'Message ID')
     ->addColumn('title', Varien_Db_Ddl_Table::TYPE_VARCHAR,
         255, array('nullable'  => false), 'Title')
-    ->addColumn('content', Varien_Db_Ddl_Table::TYPE_VARCHAR,
-        255, array('nullable'  => false), 'Content');
+    ->addColumn('content', Varien_Db_Ddl_Table::TYPE_TEXT,
+        '64k', array('nullable'  => false), 'Content');
 $adapter->createTable($table);
 
 $installer->endSetup();
