@@ -16,6 +16,13 @@
                 <class>ECA_Message_Helper</class>
             </eca_message>
         </helpers>
+        <resources>
+            <eca_message_setup>
+                <setup>
+                    <module>ECA_Message</module>
+                </setup>
+            </eca_message_setup>
+        </resources>
     </global>
     <frontend>
         <layout>

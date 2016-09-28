@@ -17,7 +17,8 @@ class ECA_Message_IndexController extends Mage_Core_Controller_Front_Action
      */
     public function saveAction()
     {
-        $post = $this->getRequest()->getPost();
-        Zend_Debug::dump($post);
+        if ($post = $this->getRequest()->getPost()) {
+
+        }
     }
 }
