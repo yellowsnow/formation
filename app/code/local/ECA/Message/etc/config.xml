@@ -16,6 +16,20 @@
                 <class>ECA_Message_Helper</class>
             </eca_message>
         </helpers>
+        <models>
+            <eca_message>
+                <class>ECA_Message_Model</class>
+                <resourceModel>eca_message_resource</resourceModel>
+            </eca_message>
+            <eca_message_resource>
+                <class>ECA_Message_Model_Resource</class>
+                <entities>
+                    <message>
+                        <table>eca_message</table>
+                    </message>
+                </entities>
+            </eca_message_resource>
+        </models>
         <resources>
             <eca_message_setup>
                 <setup>
