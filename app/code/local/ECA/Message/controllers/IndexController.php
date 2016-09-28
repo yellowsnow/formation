@@ -51,7 +51,7 @@ class ECA_Message_IndexController extends Mage_Core_Controller_Front_Action
 
                 $successMessage = $helper->__('Message successfully saved.');
                 $this->_getSession()->addSuccess($successMessage);
-                $this->_redirect('*/*/new');
+                $this->_redirect('*/*/list');
             } catch (Exception $e) {
                 $errorMessage = $helper->__('An error occured.');
                 $this->_getSession()->addError($errorMessage);
@@ -59,5 +59,11 @@ class ECA_Message_IndexController extends Mage_Core_Controller_Front_Action
                 $this->_redirect('*/*/new');
             }
         }
+    }
+
+    public function listAction()
+    {
+        $this->loadLayout();
+        $this->renderLayout();
     }
 }
