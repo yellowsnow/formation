@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <ECA_Message>
+            <version>0.1.0</version>
+        </ECA_Message>
+    </modules>
+    <global>
+        <blocks>
+            <eca_message>
+                <class>ECA_Message_Block</class>
+            </eca_message>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <eca_message>
+                    <file>eca_message.xml</file>
+                </eca_message>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <ECA_Message>
+                    <files>
+                        <default>ECA_Message.csv</default>
+                    </files>
+                </ECA_Message>
+            </modules>
+        </translate>
+        <routers>
+            <eca_message>
+                <use>standard</use>
+                <args>
+                    <module>ECA_Message</module>
+                    <frontName>eca_message</frontName>
+                </args>
+            </eca_message>
+        </routers>
+        <eca_message_index_new>
+            <update handle="page_one_column"/>
+            <reference name="content">
+                <block type="eca_message/form"
+                       name="eca_message_form"
+                       as="eca_message_form"
+                       template="eca/message/form.phtml" />
+            </reference>
+        </eca_message_index_new>
+    </frontend>
+</config>
