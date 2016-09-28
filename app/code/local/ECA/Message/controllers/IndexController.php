@@ -18,7 +18,8 @@ class ECA_Message_IndexController extends Mage_Core_Controller_Front_Action
     public function saveAction()
     {
         if ($post = $this->getRequest()->getPost()) {
-
+            $testData = array('title' => 'test');
+            Mage::getModel('eca_message/message')->addData($testData)->save();
         }
     }
 }
