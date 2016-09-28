@@ -9,7 +9,7 @@
         <blocks>
             <eca_message>
                 <class>ECA_Message_Block</class>
-            </eca_message>
+               </eca_message>
         </blocks>
         <helpers>
             <eca_message>

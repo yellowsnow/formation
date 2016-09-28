@@ -1,38 +1,40 @@
-<?php /* @var $this ECA_Message_Block_Form */?>
+<?php /* @var $this ECA_Message_Block_Form */ ?>
+<?php /* @var $helper ECA_Message_Helper_Data */ ?>
+<?php $helper = $this->helper('eca_message'); ?>
 
 <?php /* ?>
 <?php echo $this->getHelloWorld(); ?>
-<?php echo $this->__('Current time is %s', $this->formatTime()); ?>
+<?php echo $helper->__('Current time is %s', $this->formatTime()); ?>
 <?php */ ?>
 
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="page-title">
-    <h1><?php echo $this->__('Add a message') ?></h1>
+    <h1><?php echo $helper->__('Add a message') ?></h1>
 </div>
 <form action="<?php echo $this->getSaveUrl(); ?>" id="messageForm" method="post" class="scaffold-form">
     <div class="fieldset">
-        <h2 class="legend"><?php echo $this->__('Message Informations') ?></h2>
-        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+        <h2 class="legend"><?php echo $helper->__('Message Informations') ?></h2>
+        <p class="required"><?php echo $helper->__('* Required Fields') ?></p>
         <ul class="form-list">
             <li class="fields">
                 <div class="field">
-                    <label for="title" class="required"><em>*</em><?php echo $this->__('Title') ?></label>
+                    <label for="title" class="required"><em>*</em><?php echo $helper->__('Title') ?></label>
                     <div class="input-box">
-                        <input name="title" id="tite" title="<?php echo $this->quoteEscape($this->__('Title')) ?>" class="input-text required-entry" type="text" />
+                        <input name="title" id="tite" title="<?php echo $this->quoteEscape($helper->__('Title')) ?>" class="input-text required-entry" type="text" />
                     </div>
                 </div>
             </li>
             <li class="wide">
-                <label for="content" class="required"><em>*</em><?php echo $this->__('Content') ?></label>
+                <label for="content" class="required"><em>*</em><?php echo $helper->__('Content') ?></label>
                 <div class="input-box">
-                    <textarea name="content" id="content" title="<?php echo $this->quoteEscape($this->__('Content')) ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+                    <textarea name="content" id="content" title="<?php echo $this->quoteEscape($helper->__('Content')) ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
                 </div>
             </li>
         </ul>
     </div>
     <div class="buttons-set">
         <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
-        <button type="submit" title="<?php echo $this->quoteEscape($this->__('Submit')) ?>" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+        <button type="submit" title="<?php echo $this->quoteEscape($helper->__('Submit')) ?>" class="button"><span><span><?php echo $helper->__('Submit') ?></span></span></button>
     </div>
 </form>
 <script type="text/javascript">

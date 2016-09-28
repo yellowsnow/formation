@@ -18,6 +18,6 @@ class ECA_Message_Block_Form extends Mage_Core_Block_Template
      */
     public function getSaveUrl()
     {
-        return $this->getUrl('eca_message/index/save');
+        return $this->helper('eca_message')->getSaveUrl();
     }
 }
