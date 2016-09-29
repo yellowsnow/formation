@@ -10,4 +10,9 @@ class ECA_Message_Model_Message extends Mage_Core_Model_Abstract
 //    {
 //        return "lakzemlkazelmkazleka";
 //    }
+
+//    public function getCategoryName()
+//    {
+//
+//    }
 }
