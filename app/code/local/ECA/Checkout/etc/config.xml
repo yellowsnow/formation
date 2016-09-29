@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <ECA_Checkout>
+            <version>0.1.0</version>
+        </ECA_Checkout>
+    </modules>
+    <global>
+        <blocks>
+            <eca_checkout>
+                <class>ECA_Checkout_Block</class>
+            </eca_checkout>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <eca_checkout>
+                    <file>eca_checkout.xml</file>
+                </eca_checkout>
+            </updates>
+        </layout>
+    </frontend>
+</config>
