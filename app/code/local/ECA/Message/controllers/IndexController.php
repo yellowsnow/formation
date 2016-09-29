@@ -63,6 +63,8 @@ class ECA_Message_IndexController extends Mage_Core_Controller_Front_Action
 
     public function listAction()
     {
+        $categoryId = $this->getRequest()->getParam('category_id');
+        Mage::register('message_category_id', $categoryId);
         $this->loadLayout();
         $this->renderLayout();
     }
