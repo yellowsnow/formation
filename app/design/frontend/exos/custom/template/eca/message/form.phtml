@@ -23,6 +23,16 @@
                         <input name="title" id="tite" title="<?php echo $this->quoteEscape($helper->__('Title')) ?>" class="input-text required-entry" type="text" />
                     </div>
                 </div>
+                <div class="field">
+                    <label for="category_id" class="required"><em>*</em><?php echo $helper->__('Category') ?></label>
+                    <div class="input-box">
+                        <select name="category_id" id="category_id" class="input-text required-entry">
+                            <?php foreach ($helper->getCategories() as $category): ?>
+                            <option value="<?php echo $category['value']; ?>"><?php echo $category['label']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
             </li>
             <li class="wide">
                 <label for="content" class="required"><em>*</em><?php echo $helper->__('Content') ?></label>
