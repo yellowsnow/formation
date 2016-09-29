@@ -10,15 +10,20 @@
             <eca_checkout>
                 <class>ECA_Checkout_Block</class>
             </eca_checkout>
+            <checkout>
+                <rewrite>
+                    <cart_minicart>ECA_Checkout_Block_Cart_Minicart</cart_minicart>
+                </rewrite>
+            </checkout>
         </blocks>
     </global>
-    <frontend>
-        <layout>
-            <updates>
-                <eca_checkout>
-                    <file>eca_checkout.xml</file>
-                </eca_checkout>
-            </updates>
-        </layout>
-    </frontend>
+    <!--<frontend>-->
+    <!--<layout>-->
+    <!--<updates>-->
+    <!--<eca_checkout>-->
+    <!--<file>eca_checkout.xml</file>-->
+    <!--</eca_checkout>-->
+    <!--</updates>-->
+    <!--</layout>-->
+    <!--</frontend>-->
 </config>
