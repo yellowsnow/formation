@@ -7,7 +7,6 @@
 <ul>
     <?php /* @var $message ECA_Message_Model_Message */ ?>
     <?php foreach ($messageCollection as $message): ?>
-        <?php Zend_Debug::dump($message->debug()); ?>
     <li>
         <p><?php echo $helper->__('Message id : %s', $message->getId()); ?></p>
         <p><?php echo $helper->__('Message title : %s', $message->getTitle()); ?></p>
