@@ -39,7 +39,18 @@ class ECA_Message_Block_Adminhtml_Message_Grid  extends Mage_Adminhtml_Block_Wid
             'align'  => 'right',
         ));
 
+        $this->addColumn('category_id', array(
+            'header' => $this->helper('eca_message')->__('Message Category'),
+            'index'  => 'category_id',
+            'align'  => 'right',
+        ));
+
         parent::_prepareColumns();
         return $this;
+    }
+
+    public function getRowUrl($item)
+    {
+        return $this->getUrl('adminhtml/message_index/edit', array('id' => $item->getId()));
     }
 }
