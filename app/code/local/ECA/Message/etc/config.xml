@@ -65,4 +65,24 @@
             </eca_message>
         </routers>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <eca_message before="Mage_Adminhtml">ECA_Message_Adminhtml</eca_message>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <eca_message>
+                    <file>eca_message.xml</file>
+                </eca_message>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

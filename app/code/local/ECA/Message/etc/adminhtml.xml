@@ -1,0 +1,15 @@
+<config>
+    <menu>
+        <eca_message translate="title" module="eca_message">
+            <title>Message</title>
+            <sort_order>100</sort_order>
+            <children>
+                <eca_message_manage translate="title">
+                    <title>Manage message</title>
+                    <action>adminhtml/message_index</action>
+                    <sort_order>10</sort_order>
+                </eca_message_manage>
+            </children>
+        </eca_message>
+    </menu>
+</config>
