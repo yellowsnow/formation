@@ -2,7 +2,22 @@
 <layout version="0.1.0">
     <adminhtml_message_index_index>
         <reference name="content">
-            <block type="eca_message/adminhtml_message" name="message_grid" as="message_grid" />
+            <block type="eca_message/adminhtml_message" name="message_grid" as="message_grid"/>
         </reference>
     </adminhtml_message_index_index>
+
+    <adminhtml_message_index_edit>
+        <reference name="left">
+            <block type="eca_message/adminhtml_message_edit_tabs" name="message_edit_tabs">
+                <block type="eca_message/adminhtml_message_edit_tab_main" name="message_edit_tab_main"/>
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>message_edit_tab_main</block>
+                </action>
+            </block>
+        </reference>
+        <reference name="content">
+            <block type="eca_message/adminhtml_message_edit" name="message.edit"/>
+        </reference>
+    </adminhtml_message_index_edit>
 </layout>
