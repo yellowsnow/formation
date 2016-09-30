@@ -1,6 +1,31 @@
 <?php
 class ECA_Message_Block_List extends Mage_Core_Block_Template
 {
+    public function getCacheLifetime()
+    {
+        return 3600;
+    }
+
+    public function getCacheTags()
+    {
+        $tags = parent::getCacheTags();
+        $tags[] = 'message_list';
+
+        return $tags;
+    }
+
+    public function getCacheKey()
+    {
+        $cacheKey = 'MESSAGE_LIST' . '_' .
+                    'STORE_' . Mage::app()->getStore()->getId() . '_' .
+                    'SECURE_' . (int) Mage::app()->getStore()->isCurrentlySecure() . '_' .
+                    Mage::getDesign()->getPackageName() . '_' .
+                    Mage::getDesign()->getTheme('template') . '_' .
+                    'CATEGORY_ID_' . (int) $this->getCategoryId();
+
+        return $cacheKey;
+    }
+
     /**
      * Get Message collection
      *
@@ -15,12 +40,17 @@ class ECA_Message_Block_List extends Mage_Core_Block_Template
         /* @var $messageCollection ECA_Message_Model_Resource_Message_Collection */
         $messageCollection = $messageModel->getCollection();
 
-        $categoryId = Mage::registry('message_category_id');
+        $categoryId = $this->getCategoryId();
         if ($categoryId) {
             $messageCollection->addCategoryFilter($categoryId);
-//            $messageCollection->addFieldToFilter('category_id', $categoryId);
         }
 
         return $messageCollection;
+    }
+
+    public function getCategoryId()
+    {
+        $categoryId = Mage::registry('message_category_id');
+        return $categoryId;
     }
 }
