@@ -46,4 +46,11 @@
             </updates>
         </layout>
     </frontend>
+    <default>
+        <catalog>
+            <seo>
+                <show_disabled_products>1</show_disabled_products>
+            </seo>
+        </catalog>
+    </default>
 </config>
