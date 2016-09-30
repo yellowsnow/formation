@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <ECA_Customer>
+            <version>0.1.0</version>
+        </ECA_Customer>
+    </modules>
+    <global>
+        <models>
+            <eca_customer>
+                <class>ECA_Customer_Model</class>
+            </eca_customer>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <customer_login>
+                <observers>
+                    <eca_customer_customer_login_logcustomer>
+                        <class>eca_customer/observer</class>
+                        <method>logCustomer</method>
+                    </eca_customer_customer_login_logcustomer>
+                </observers>
+            </customer_login>
+        </events>
+    </frontend>
+</config>

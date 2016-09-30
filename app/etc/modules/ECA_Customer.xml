@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <modules>
+        <ECA_Customer>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Customer />
+            </depends>
+        </ECA_Customer>
+    </modules>
+</config>
