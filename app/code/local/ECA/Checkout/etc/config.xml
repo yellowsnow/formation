@@ -16,7 +16,24 @@
                 </rewrite>
             </checkout>
         </blocks>
+        <models>
+            <eca_checkout>
+                <class>ECA_Checkout_Model</class>
+            </eca_checkout>
+        </models>
     </global>
+    <frontend>
+        <events>
+            <checkout_allow_guest>
+                <observers>
+                    <eca_checkout_allow_guest_checkguest>
+                        <class>eca_checkout/observer</class>
+                        <method>checkGuest</method>
+                    </eca_checkout_allow_guest_checkguest>
+                </observers>
+            </checkout_allow_guest>
+        </events>
+    </frontend>
     <!--<frontend>-->
     <!--<layout>-->
     <!--<updates>-->
@@ -26,4 +43,11 @@
     <!--</updates>-->
     <!--</layout>-->
     <!--</frontend>-->
+    <!--<default>-->
+        <!--<checkout>-->
+            <!--<options>-->
+                <!--<guest_checkout>0</guest_checkout>-->
+            <!--</options>-->
+        <!--</checkout>-->
+    <!--</default>-->
 </config>
