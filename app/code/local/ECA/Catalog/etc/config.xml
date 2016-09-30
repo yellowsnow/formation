@@ -20,21 +20,21 @@
             <eca_catalog>
                 <class>ECA_Catalog_Helper</class>
             </eca_catalog>
-            <catalog>
-                <rewrite>
-                    <product>ECA_Catalog_Helper_Product</product>
-                </rewrite>
-            </catalog>
+            <!--<catalog>-->
+                <!--<rewrite>-->
+                    <!--<product>ECA_Catalog_Helper_Product</product>-->
+                <!--</rewrite>-->
+            <!--</catalog>-->
         </helpers>
         <models>
             <eca_catalog>
                 <class>ECA_Catalog_Model</class>
             </eca_catalog>
-            <!--<catalog>-->
-                <!--<rewrite>-->
-                    <!--<product_status>ECA_Catalog_Model_Product_Status</product_status>-->
-                <!--</rewrite>-->
-            <!--</catalog>-->
+            <catalog>
+                <rewrite>
+                    <product_status>ECA_Catalog_Model_Product_Status</product_status>
+                </rewrite>
+            </catalog>
         </models>
     </global>
     <frontend>
