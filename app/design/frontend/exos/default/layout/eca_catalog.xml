@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout version="0.1.0">
+    <catalog_seo_sitemap_product>
+        <reference name="seo.sitemap.sitemap">
+            <action method="setTemplate">
+                <template>catalog/seo/sitemap_product.phtml</template>
+            </action>
+        </reference>
+    </catalog_seo_sitemap_product>
+</layout>
