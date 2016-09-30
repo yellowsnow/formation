@@ -26,4 +26,11 @@
     <!--</updates>-->
     <!--</layout>-->
     <!--</frontend>-->
+    <default>
+        <checkout>
+            <options>
+                <guest_checkout>0</guest_checkout>
+            </options>
+        </checkout>
+    </default>
 </config>
